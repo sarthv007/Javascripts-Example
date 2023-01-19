@@ -21,13 +21,3 @@ let p = new Programmer("sarthak", 200000, 20);
 p.slogan();
 p.writeCode();
 console.log(p);
-
-const fruits = [{ name: "sarthak" }, { name: "surbhi" }, { name: "sayali" }];
-
-const newArr = fruits.map(function (item, index, fruitArr) {
-  fruitArr[index]["name"] = "sarthak";
-  return item;
-});
-
-console.log(fruits);
-console.log(newArr);
