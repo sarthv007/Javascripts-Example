@@ -1,25 +1,41 @@
-// Function
-// ===============================
-
-// what is function statement
-// what is function declaration
-// what is function defination
-// what is function expression
-// // what is arrow function
-// what annonamous function
-// what immediatly invoke function
-// what callback function
-
-function add(a, b) {
-  let sum = a + b;
-  return 1;
+function Person() {
+  this.name = "sarthak";
 }
 
-console.log(add(10, 20));
-
-//function expression
-let sub = function () {
-  console.log("subtracting method");
+Person.prototype.getData = function () {
+  console.log(this.name);
 };
 
-sub();
+function Employee() {
+  Person.call(this);
+  this.age = 20;
+}
+
+Employee.prototype.getAge = function () {
+  console.log(this.age);
+};
+
+Employee.prototype.__proto__ = Object.create(Person.prototype);
+
+let emp = new Employee();
+console.log(Object.getPrototypeOf(Employee));
+emp.getData();
+emp.getAge();
+
+// let m1 = function () {};
+// console.log(Object.getPrototypeOf(m1));
+
+// let obj = Object.create({
+//   first_name: "sarthak",
+//   last_name: "vaidya",
+//   age: 30,
+// });
+
+// console.log("Using Object.create ", obj);
+
+// const person1 = new Object({
+//   first_name: "sarthak",
+//   last_name: "vaidya",
+//   age: 30,
+// });
+// console.log("Using instance of object ", person1);
