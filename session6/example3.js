@@ -22,3 +22,7 @@ let jsonArr = [
   { first_name: "sarthak" },
   { first_name: "sarthak" },
 ];
+
+let json = JSON.stringify(user);
+
+let jsArray = JSON.parse(jsonArr);
