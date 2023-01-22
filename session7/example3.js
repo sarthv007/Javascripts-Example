@@ -1,3 +1,3 @@
-(function () {
-  console.log("test file3");
-})();
+function add() {
+  return "sarthak";
+}
