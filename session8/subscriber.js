@@ -6,6 +6,7 @@ let subscribe = () => {
 let subcriberCount = subscribe();
 
 button = document.getElementById("button");
-button.addEventListener("click", function () {
+
+button.addEventListener("click", () => {
   document.getElementById("counter").innerHTML = subcriberCount();
 });
